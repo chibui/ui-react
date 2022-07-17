@@ -18,9 +18,9 @@ export const RowList = ({
     <RowListContainer>
       {items.map((item, i) => (
         <ItemComponent 
-          active={active} 
-          key={item.id} 
-          setActive={setActive} 
+          active={ active } 
+          key={ item.id } 
+          setActive={ setActive } 
           {...{ [resource]:item }} />
       ))}
     </RowListContainer>

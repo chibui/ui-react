@@ -19,8 +19,8 @@ function App() {
         name='users'
         url={'https://jsonplaceholder.typicode.com/users'}>
           <UsersList 
-            active={userActive} 
-            setActive={setUserActive} />
+            active={ userActive }  
+            setActive={ setUserActive }/>
       </Loader>
       
       { userActive.id && 

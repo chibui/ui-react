@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { Spinner } from '../../components/Spinner';
 
 const ColumnListContainer = styled.div`
   display: flex;
@@ -47,12 +48,12 @@ export const ColList = ({
   return items ? ( 
     <ColumnListContainer>
       {listToRender.map((item) => (
-        <ItemComponent key={item.id} {...{ [resource]:item}} />
+        <ItemComponent key={ item.id } {...{ [resource]:item}} />
       ))}
 
       { showButton && (
-        <LoadMoreButton notNested={notNested} onClick={() => handleButton()}>...Load all</LoadMoreButton>
+        <LoadMoreButton notNested={ notNested } onClick={() => handleButton()}>...Load all</LoadMoreButton>
       )}
     </ColumnListContainer>
-  ) : <p>...Loading</p>
+  ) : <Spinner/>
 };
